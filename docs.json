@@ -24,8 +24,8 @@
             "group": "Essentials",
             "pages": [
               "essentials/create-event",
-              "essentials/vendor-management",
               "essentials/event-analytics",
+              "essentials/vendor-management",
               "essentials/mobile-app",
               "essentials/mapping",
               "essentials/manage-team",
