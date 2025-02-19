@@ -1,84 +1,74 @@
 ---
 title: "Vendor Management"
-description: "Text, title, and styling in standard markdown"
+description: "Treasure allows you to integrate your entire vendor management process directly into your event page, starting from when you first create your event. "
 icon: "store"
 ---
 
 ## Manage Vendors
 
-Best used for section headers.
+To manage your vendors on Treasure, there are a few key steps that will help to make the process go smoothly from day 1.
 
-```md
-## Titles
-```
+<Steps>
+  <Step title="Set Your Table and Application Information">
+    When creating or editing your event, you can set:&#x20;
 
-### Subtitles
+    * The price and size of your tables
 
-Best use to subsection headers.
+    * Vendor check-in information
 
-```md
-### Subtitles
-```
+    * Custom vendor application questions
+
+
+    ![](/images/vendor-apps.png)
+  </Step>
+
+  <Step title="Track Vendors on Your Vendor Dashboard">
+    Once your event is live and you start receiving vendor applications, you can keep track of them from your vendor dashboard. The dashboard provides an overview of the number of applications you've accepted/rejected and how much of each table tier you've sold
+
+    ![](/images/vendor-dash.png)
+  </Step>
+
+  <Step title="Review Vendor Applications">
+    If you click into any vendor application, you will see all of their responses to the default vendor application questions, as well as any unique questions that you added in the create event process. You can add notes to vendors and accept, reject, or waitlist them from their application
+
+    ![](/images/vendor-review.png)
+  </Step>
+</Steps>
+
+### Vendor Payment
+
+You're able to accept vendor payment in three different timelines:
+
+1. Accept payment immediately and accept vendors without review
+
+2. Charge vendors when you accept their application (they will be prompted to add payment information during the application process)
+
+3. Allow vendors to pay in a set window after being accepted (this gives your vendors the most flexibility to pay when it is convenient for them)
 
 <Tip>
-  Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+  Note that with option 2, vendors will receive the price that you had for your tables at the time of their application, regardless of any changes to the price made after they applied
 </Tip>
 
-## Text Formatting
+### See it in Action
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c-XxJ-EopvM?si=JXz3Y5xUlr4vPzuS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
-| Style         | How to write it   | Result            |
-| ------------- | ----------------- | ----------------- |
-| Bold          | `**bold**`        | **bold**          |
-| Italic        | `_italic_`        | *italic*          |
-| Strikethrough | `~strikethrough~` | ~~strikethrough~~ |
+### Temporary Vendors and "Mark as Paid"
 
-You can combine these. For example, write `**_bold and italic_**` to get ***bold and italic*** text.
+For your vendors that don't want to use Treasure at all, we offer a solution in the form of temporary vendors.&#x20;
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+* Temporary vendors are created by you, and can be treated like any other vendor once they are set up in your event
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+  * They can be assigned to specific tables on your venue map
 
-## Linking to Pages
+  * You can designate the exact type of tables they purchased
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+  * They **will not** be able to update their own information such as additional social links&#x20;
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+    ![](/images/temp-vendors.png)
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+Vendors that are comfortable applying with their information on Treasure but have arranged for an alternative form of payment with you can be "Mark as Paid" from the vendor dashboard once they are accepted.&#x20;
 
-## Blockquotes
+* Vendors that are mark as paid (and temporary vendors) will not impact your total sales numbers on Treasure at all
 
-### Singleline
-
-To create a blockquote, add a `>` in front of a paragraph.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
-
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+![](/images/vendorappflat.png)
