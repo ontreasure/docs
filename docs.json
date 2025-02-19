@@ -28,7 +28,8 @@
               "essentials/event-analytics",
               "essentials/mobile-app",
               "essentials/mapping",
-              "essentials/manage-team"
+              "essentials/manage-team",
+              "essentials/embed"
             ]
           }
         ]
