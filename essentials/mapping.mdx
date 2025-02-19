@@ -4,80 +4,78 @@ description: "Build to-scale venue maps from scratch with our venue map tool"
 icon: "map"
 ---
 
-The navigation menu is the list of links on every website.
+Treasure allows organizers to build interactive venue maps where they can highlight vendors, special guests and other exciting event features!
 
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
+Hosts have the option to build venue map templates that can be reused across events or build one-time layouts for specific events.
 
-## Navigation syntax
+## Venue Map Templates
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+To get started with creating a venue map template you can navigate to the ["Venue Maps" page](https://www.ontreasure.com/host/venue-maps) from your host dashboard.
 
-<CodeGroup>
-  ```json Regular Navigation
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Docs",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": ["quickstart"]
-          }
-        ]
-      }
-    ]
-  }
-  ```
+![](/images/map-templates.png)
 
-  ```json Nested Navigation
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Docs",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "quickstart",
-              {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  ```
-</CodeGroup>
+## Event-Specific Maps
 
-## Folders
+To get started with creating a venue map for a specific event, select "Edit Venue Map" from the lefthand menu on your event dashboard.
 
-Simply put your MDX files in folders and update the paths in `docs.json`.
+![](/images/venue-map.png)
 
-For example, to have a page at [`https://yoursite.com/your-folder/your-page`](https://yoursite.com/your-folder/your-page) you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+## Building Your Venue Map
 
-<Warning>
-  You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-</Warning>
+After you decide whether you want to build a template or an event-specific map, you can get started on building your first venue map! Below are the steps for creating and going live on your event page with a venue map:
 
-```json Navigation With Folder
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Group Name",
-          "pages": ["your-folder/your-page"]
-        }
-      ]
-    }
-  ]
-}
-```
+<Note>
+  If you are building a map template, the only way this process would differ is that after creating your template, you then must go into the event you are hoping to set the map live for and choose the template you just created when prompted to do so from the "Edit Venue Map" page.
+</Note>
 
-## Hidden Pages
+<Steps>
+  <Step title="Import Your Floorplan">
+    Select the image icon in the right hand toolbar to import an accurate image of your floor plan that you will layout your vendor tables within&#x20;
 
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+    ![](/images/floorplan.png)
+  </Step>
+
+  <Step title="Place Vendor Tables">
+    When your floor plan is set, you can begin placing your vendor tables! To do so, click the shapes icon on the right hand toolbar. Then, select a pre-made shape or create a new one of your own and use the bottom toolbar to toggle between placing rows and single tables, as well as setting the color of your shape.
+
+    ![](/images/shapes.png)
+  </Step>
+
+  <Step title="Place Event Amenities">
+    You can add event amenities, like restrooms and dining areas from the bookshelf icon on the same right hand toolbar.
+
+    ![](/images/amenities.png)
+  </Step>
+
+  <Step title="Assign Vendors">
+    Once you finish setting up your table and other event landmarks, you can begin to assign your vendors to tables. Clicking into "Vendor Assignments" in the top left corner of your map will expand the vendor assignment menu and allow you to assign any of your accepted vendors to tables based on what they requested in their application.
+
+    ![](/images/venuemap.png)
+  </Step>
+
+  <Step title="Update Your Settings">
+    When your map is completely built and you want to share it with your vendors or make it public on your event page, you can follow these steps:
+
+    1. Save your map and click the Settings Icon in the top right of your map
+
+    2. In your settings panel, switch to the "Map Display" tab. There, you can toggle map visibility on, and select whether everyone or just your vendors can see the map
+
+    3. Set a border for your map that encompasses the entire venue map you've created with additional padding around your floor plan for better visibility on your event page
+
+    4. Check out a preview of what your venue map will look like when it's live on your page
+
+    5. Save your settings!
+
+    ![](/images/map-settings.png)
+  </Step>
+</Steps>
+
+<Check>
+  Your map will now be live! You can go check out your event page to see what the audience that you selected in the visibility settings will see.
+</Check>
+
+## See a Map Being Built Live
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zYaE7H0h9wk?si=j9SofKlMuK747jDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
