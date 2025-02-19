@@ -23,11 +23,11 @@
           {
             "group": "Essentials",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
               "essentials/create-event",
-              "essentials/settings",
-              "essentials/navigation",
+              "essentials/vendor-management",
+              "essentials/event-analytics",
+              "essentials/mobile-app",
+              "essentials/mapping",
               "essentials/manage-team"
             ]
           }
