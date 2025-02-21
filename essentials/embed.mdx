@@ -10,6 +10,7 @@ sidebarTitle: "Embed Checkout"
 To embed Treasure ticket sales into your website, you can use the following code
 
 ```javascript
+<div class="iframe-section">
 <iframe 
 src="YOUR-EVENT-URL/embed-checkout?embed=true&amp;wmode=opaque" 
 sandbox="allow-same-origin allow-forms allow-scripts" 
@@ -20,6 +21,62 @@ title="Ticket booking"
 loading="lazy"
 >
 </iframe>
+ </div>
+ 
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all iframes with the dynamic-iframe class
+    var iframes = document.getElementsByClassName('dynamic-iframe');
+    
+    function adjustIframeHeight(iframe) {
+      try {
+        // Get the scroll height of the iframe content
+        var contentHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+        
+        // Set a minimum height of 800px
+        var finalHeight = Math.max(contentHeight, 800);
+        
+        // Add some padding to ensure content isn't cut off
+        finalHeight += 50;
+        
+        iframe.style.height = finalHeight + 'px';
+      } catch (error) {
+        // If we can't access the contentWindow (due to cross-origin),
+        // ensure we at least maintain the minimum height
+        iframe.style.height = '800px';
+      }
+    }
+
+    // Add event listeners for each iframe
+    Array.from(iframes).forEach(function(iframe) {
+      // Set initial height
+      iframe.style.height = '800px';
+      
+      iframe.onload = function() {
+        adjustIframeHeight(iframe);
+      };
+
+      // Set up periodic height adjustment for each iframe
+      setInterval(function() {
+        adjustIframeHeight(iframe);
+      }, 1000);
+    });
+
+    // Single event listener for message events
+    window.addEventListener('message', function(event) {
+      if (event.origin === 'https://www.ontreasure.com') {
+        if (event.data.height && event.data.iframeId) {
+          var targetIframe = document.getElementById(event.data.iframeId);
+          if (targetIframe) {
+            // Ensure minimum height is maintained even with postMessage
+            var height = Math.max(parseInt(event.data.height), 800);
+            targetIframe.style.height = height + 'px';
+          }
+        }
+      }
+    }, false);
+  });
+</script>
 ```
 
 <Note>
@@ -31,6 +88,7 @@ loading="lazy"
 To embed Treasure vendor applications into your website, you can use the following code
 
 ```javascript
+  <div class="iframe-section">
   <iframe
     style="width:100%; border:none; border-radius:10px; background-color: white"
     id="table-iframe"
@@ -41,6 +99,62 @@ To embed Treasure vendor applications into your website, you can use the followi
     
   >
   </iframe>
+  </div>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all iframes with the dynamic-iframe class
+    var iframes = document.getElementsByClassName('dynamic-iframe');
+    
+    function adjustIframeHeight(iframe) {
+      try {
+        // Get the scroll height of the iframe content
+        var contentHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+        
+        // Set a minimum height of 800px
+        var finalHeight = Math.max(contentHeight, 800);
+        
+        // Add some padding to ensure content isn't cut off
+        finalHeight += 50;
+        
+        iframe.style.height = finalHeight + 'px';
+      } catch (error) {
+        // If we can't access the contentWindow (due to cross-origin),
+        // ensure we at least maintain the minimum height
+        iframe.style.height = '800px';
+      }
+    }
+
+    // Add event listeners for each iframe
+    Array.from(iframes).forEach(function(iframe) {
+      // Set initial height
+      iframe.style.height = '800px';
+      
+      iframe.onload = function() {
+        adjustIframeHeight(iframe);
+      };
+
+      // Set up periodic height adjustment for each iframe
+      setInterval(function() {
+        adjustIframeHeight(iframe);
+      }, 1000);
+    });
+
+    // Single event listener for message events
+    window.addEventListener('message', function(event) {
+      if (event.origin === 'https://www.ontreasure.com') {
+        if (event.data.height && event.data.iframeId) {
+          var targetIframe = document.getElementById(event.data.iframeId);
+          if (targetIframe) {
+            // Ensure minimum height is maintained even with postMessage
+            var height = Math.max(parseInt(event.data.height), 800);
+            targetIframe.style.height = height + 'px';
+          }
+        }
+      }
+    }, false);
+  });
+</script>
 ```
 
 <Note>
