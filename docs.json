@@ -51,7 +51,7 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "link": "https://www.ontreasure.com/home"
+    "href": "https://www.ontreasure.com/home"
   },
   "navbar": {
     "links": [
